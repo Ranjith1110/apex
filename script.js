@@ -163,3 +163,32 @@ const initCounters = (selector) => {
 initCounters(".stats");
 initCounters(".impact-metrics");
 initCounters(".metrics-row");
+
+
+
+
+const video = document.getElementById("wellnessVideo");
+const playPauseBtn = document.getElementById("playPauseBtn");
+const muteToggle = document.getElementById("muteToggle");
+
+const playIcon = '<i class="fas fa-play"></i>';
+const pauseIcon = '<i class="fas fa-pause"></i>';
+const muteIcon = '<i class="fas fa-volume-mute"></i>';
+const unmuteIcon = '<i class="fas fa-volume-up"></i>';
+
+// Play / Pause Toggle
+playPauseBtn.addEventListener("click", () => {
+    if (video.paused) {
+        video.play();
+        playPauseBtn.innerHTML = pauseIcon;
+    } else {
+        video.pause();
+        playPauseBtn.innerHTML = playIcon;
+    }
+});
+
+// Mute / Unmute Toggle
+muteToggle.addEventListener("click", () => {
+    video.muted = !video.muted;
+    muteToggle.innerHTML = video.muted ? muteIcon : unmuteIcon;
+});

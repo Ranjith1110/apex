@@ -1086,3 +1086,40 @@ body {
         justify-content: center;
     }
 }
+
+
+.video-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.video-wrapper video {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Controls container */
+.video-controls {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Buttons */
+.control-btn {
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.control-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
